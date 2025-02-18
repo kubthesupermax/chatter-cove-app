@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatter-Cove</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">Chatter Cove</div>
+        <nav class="nav">
+          <a href="#" class="nav-link">Docs</a>
+          <a href="#" class="nav-link">About</a>
+        </nav>
+      </header>
+
+      <main class="main">
+        <h1 class="title">TTS & Translation App</h1>
+        <textarea
+          class="textarea"
+          placeholder="Type your text here..."
+        ></textarea>
+
+        <div class="form-group">
+          <label for="languageSelect" class="label">Select Language</label>
+          <select id="languageSelect" class="select">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="voice__selector" class="label">Select Voice</label>
+          <select id="voice__selector" class="select">
+            <option value="default">Default Voice</option>
+            <option value="voice1">Voice 1</option>
+            <option value="voice2">Voice 2</option>
+          </select>
+        </div>
+
+        <button id="play__button">Play Text</button>
+      </main>
+
+      <footer class="footer"></footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

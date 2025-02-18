@@ -1,0 +1,30 @@
+// Array of supported languages with their ISO codes
+const languages = [
+  { code: "en", name: "English" },
+  { code: "es", name: "Spanish" },
+  { code: "fr", name: "French" },
+  { code: "de", name: "German" },
+  { code: "zh", name: "Chinese" },
+  { code: "ar", name: "Arabic" },
+  { code: "ru", name: "Russian" },
+  { code: "ja", name: "Japanese" },
+  { code: "hi", name: "Hindi" },
+  { code: "pt", name: "Portuguese" },
+  { code: "it", name: "Italian" },
+  { code: "tr", name: "Turkish" },
+  { code: "ko", name: "Korean" },
+  { code: "vi", name: "Vietnamese" },
+  { code: "nl", name: "Dutch" },
+  { code: "pl", name: "Polish" },
+  { code: "sv", name: "Swedish" },
+  { code: "uk", name: "Ukrainian" },
+  { code: "el", name: "Greek" },
+  { code: "th", name: "Thai" },
+  { code: "ha", name: "Hausa" },
+  { code: "yo", name: "Yoruba" },
+  { code: "ig", name: "Igbo" },
+  { code: "he", name: "Hebrew" },
+  { code: "bn", name: "Bengali" },
+];
+
+export { languages };
