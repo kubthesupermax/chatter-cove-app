@@ -10,11 +10,21 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method Not allowed" });
+  // Set CORS headers
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins (or specify your frontend URL)
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS"); // Allow POST and OPTIONS requests
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type"); // Allow Content-Type header
+
+  // Handle preflight requests (OPTIONS)
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
   }
 
-  // console.log(req.body);
+  // Only allow POST requests
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method Not Allowed" });
+  }
+
   const { text, target } = req.body;
 
   if (!text || !target) {
@@ -44,7 +54,7 @@ export default async function handler(req, res) {
     const data = await response.json();
     res.status(200).json(data);
   } catch (error) {
-    console.error("API CALL ERROR :", error);
+    console.error("API CALL ERROR:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 }
