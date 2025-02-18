@@ -11,7 +11,7 @@ if (process.env.NODE_ENV !== "production") {
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(200).json({ error: "Method Not allowed" });
+    return res.status(405).json({ error: "Method Not allowed" });
   }
 
   // console.log(req.body);
